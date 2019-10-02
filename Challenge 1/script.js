@@ -1,7 +1,6 @@
 const fs = require('fs'); //Ask for filesystem
 
-let countUp = 0;
-let countDown = 0;
+let currentFloor = 0;
 
 fs.readFile('./santa.txt', (err, data) => {
 	console.time('readySetGo');
@@ -9,12 +8,11 @@ fs.readFile('./santa.txt', (err, data) => {
 	let arrText = text.split('');
 	for(let i = 0; i < arrText.length; i++){
 		if (arrText[i] === '('){
-			countUp += 1;
+			currentFloor += 1;
 		} else {
-			countDown -= 1;
+			currentFloor -= 1;
 		}
 	}
-	let totalCount = countUp + countDown;
-	console.log(totalCount);
+	console.log(currentFloor);
 	console.timeEnd('readySetGo');
 })
