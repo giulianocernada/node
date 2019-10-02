@@ -2,6 +2,8 @@
 
 This challenge was taken from https://adventofcode.com/2015/day/1 and goes as it follows...
 
+It includes a time count to know how much does it take to resolve!
+
 # Exercise 1
 
 --- Day 1: Not Quite Lisp ---
